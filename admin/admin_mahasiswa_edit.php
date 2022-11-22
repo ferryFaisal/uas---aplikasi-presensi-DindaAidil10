@@ -93,6 +93,7 @@ if (isset($_GET['id'])) {
                                     <option selected><?php echo $data['kelas']; ?></option>
                                     <!-- <option value="5A">5A</option> -->
                                     <option value="5B">5B</option>
+                                    <option value="5A">5A</option>
                                 </select>
                             </div>
                         </div>

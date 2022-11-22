@@ -165,6 +165,7 @@ if ($_SESSION['role'] == "Admin") {
                                         <th>NIM</th>
                                         <th>Nama</th>
                                         <th>Status Presensi</th>
+                                        <th>Action</th>
                                         <!-- <th>Photo</th>
                                         <th>Stock</th>
 
@@ -176,12 +177,7 @@ if ($_SESSION['role'] == "Admin") {
                                 </thead>
                                 <tfoot>
                                     <tr>
-                                        <th>Tanggal Presensi</th>
-                                        <th>Makul</th>
-                                        <th>Kelas</th>
-                                        <th>NIM</th>
-                                        <th>Nama</th>
-                                        <th>Status Presensi</th>
+                                        
                                         <!-- <th>Photo</th>
                                         <th>Stock</th>
 
@@ -203,14 +199,14 @@ if (mysqli_num_rows($result) > 0) {
                                         <td><?php echo $row['makul'] ?></td>
                                         <td><?php echo $row['kelas'] ?></td>
                                         <td><?php echo $row['nim'] ?></td>
-
                                         <td><?php echo $row['nama'] ?></td>
                                         <td><?php echo $row['status_presensi'] ?></td>
 
+                                        <td>
+                                            <a href='form_update_user.php?email=<?php echo $row['email']?>'><i
+                                            class="bi bi-pen"></i></a>
 
-
-
-
+                                     </td>
 
                                     </tr>
                                     <?php
@@ -231,16 +227,8 @@ mysqli_close($conn);
                         <!-- </div>
                     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                 </div> -->
-
-
-
                     </div>
-
-
-
-
                 </div>
-
                 <!-- Sticky Footer -->
                 <footer class="sticky-footer">
                     <div class="container my-auto">
